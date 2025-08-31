@@ -15,7 +15,10 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
-
+      
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v4.0.0
+        
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
